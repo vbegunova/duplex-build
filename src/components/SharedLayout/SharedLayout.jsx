@@ -14,9 +14,25 @@ import {
   SocMediaTelegram,
   MobileMenuBtn,
   PhoneLink,
-  MobileMenuIcon
+  MobileMenuIcon,
+  Footer,
+  Info,
+  Logo,
+  InfoLink,
+  Copyright,
+  NavList,
+  FooterStyledLink,
+  ContactsSubtitle,
+  Subtitle,
+  FooterPhoneLink,
+  SocMediaContactsSubtitle,
+  FooterSocMediaItem,
+  FooterContainer,
+  RoundElem,
 } from './SharedLayout.styled';
-import sprite from '../../images/sprite.svg'
+import sprite from '../../images/sprite.svg';
+import logo from '../../images/logo.png';
+import roundElem from '../../images/footer-round-elem.png';
 
 const SharedLayout = () => {
   return (
@@ -24,7 +40,7 @@ const SharedLayout = () => {
       <Header>
         <Container>
           <NavLink to="/">
-            <LogoImage src="./images/logo-desktop.png" alt="logo" />
+            <LogoImage src={logo} alt="logo" />
           </NavLink>
           <Navigation>
             <List>
@@ -66,13 +82,11 @@ const SharedLayout = () => {
                 </SocMediaLink>
               </li>
             </SocMediaList>
-            <PhoneLink href="#">
-              +38 98 000 0000
-            </PhoneLink>
+            <PhoneLink href="#">+38 98 000 0000</PhoneLink>
           </Contacts>
           <MobileMenuBtn
-            // aria-expanded="false"
-            // aria-controls="mobile-menu"
+          // aria-expanded="false"
+          // aria-controls="mobile-menu"
           >
             <MobileMenuIcon>
               <use href={`${sprite}#icon-burger`}></use>
@@ -86,7 +100,65 @@ const SharedLayout = () => {
           <Outlet />
         </Suspense>
       </main>
-
+      <Footer>
+        <FooterContainer>
+          <Info>
+            <Logo to="/">
+              <LogoImage src={logo} alt="logo" />
+            </Logo>
+            <InfoLink>Договір публічної оферти</InfoLink>
+            <InfoLink>Політика конфіденційності</InfoLink>
+            <Copyright>
+              © 2024 Лінія Будівництва
+              <br />
+              Всі права захищені
+            </Copyright>
+          </Info>
+          <div>
+            <Subtitle>Навігація</Subtitle>
+            <NavList>
+              <FooterStyledLink to="/about-company">
+                Про компанію
+              </FooterStyledLink>
+              <FooterStyledLink to="/catalog">Каталог</FooterStyledLink>
+              <FooterStyledLink to="/blog">Блог</FooterStyledLink>
+              <FooterStyledLink to="/contacts">Контакти</FooterStyledLink>
+            </NavList>
+          </div>
+          <div>
+            <Subtitle>Наші контакти</Subtitle>
+            <ContactsSubtitle>Номер телефону</ContactsSubtitle>
+            <FooterPhoneLink href="#">+380 98 000 0000</FooterPhoneLink>
+            <SocMediaContactsSubtitle>
+              Наші соціальні мережі
+            </SocMediaContactsSubtitle>
+            <SocMediaList>
+              <li>
+                <FooterSocMediaItem>
+                  <SocMediaIcon>
+                    <use href={`${sprite}#icon-instagram`}></use>
+                  </SocMediaIcon>
+                </FooterSocMediaItem>
+              </li>
+              <li>
+                <FooterSocMediaItem>
+                  <SocMediaIcon>
+                    <use href={`${sprite}#icon-facebook`}></use>
+                  </SocMediaIcon>
+                </FooterSocMediaItem>
+              </li>
+              <li>
+                <FooterSocMediaItem>
+                  <SocMediaTelegram>
+                    <use href={`${sprite}#icon-telegram`}></use>
+                  </SocMediaTelegram>
+                </FooterSocMediaItem>
+              </li>
+            </SocMediaList>
+          </div>
+          <RoundElem src={roundElem}/>
+        </FooterContainer>
+      </Footer>
     </>
   );
 };
