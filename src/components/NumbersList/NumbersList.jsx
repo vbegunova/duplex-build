@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Container, List, Number, Description } from './NumbersList.styled';
 
 const NumbersList = () => {
@@ -25,6 +25,41 @@ const NumbersList = () => {
     };
   }, []);
 
+  const animateNumber = useCallback(
+    (finalNumber, elementId, duration = 2000, startNumber = 0) => {
+      const element = document.getElementById(elementId);
+      let started = false;
+
+      const startAnimation = () => {
+        if (started) return;
+        if (isElementVisible(element)) {
+          let startTime = null;
+
+          const animation = currentTime => {
+            if (!startTime) startTime = currentTime;
+            const elapsedTime = currentTime - startTime;
+            const progress = Math.min(elapsedTime / duration, 1);
+
+            element.innerText = Math.floor(
+              progress * (finalNumber - startNumber) + startNumber
+            );
+
+            if (progress < 1) {
+              requestAnimationFrame(animation);
+            }
+          };
+
+          started = true;
+          requestAnimationFrame(animation);
+        }
+      };
+
+      window.addEventListener('scroll', startAnimation);
+      startAnimation();
+    },
+    []
+  );
+
   useEffect(() => {
     if (isVisible) {
       animateNumber(20, 'first-num');
@@ -32,45 +67,7 @@ const NumbersList = () => {
       animateNumber(1400, 'third-num');
       animateNumber(55, 'fourth-num');
     }
-  }, [isVisible]);
-
-  function animateNumber(
-    finalNumber,
-    elementId,
-    duration = 2000,
-    startNumber = 0
-  ) {
-    const element = document.getElementById(elementId);
-
-    let started = false;
-
-    function startAnimation() {
-      if (started) return;
-      if (isElementVisible(element)) {
-        let startTime = null;
-
-        function animation(currentTime) {
-          if (!startTime) startTime = currentTime;
-          const elapsedTime = currentTime - startTime;
-          const progress = Math.min(elapsedTime / duration, 1);
-
-          element.innerText = Math.floor(
-            progress * (finalNumber - startNumber) + startNumber
-          );
-
-          if (progress < 1) {
-            requestAnimationFrame(animation);
-          }
-        }
-
-        started = true;
-        requestAnimationFrame(animation);
-      }
-    }
-
-    window.addEventListener('scroll', startAnimation);
-    startAnimation();
-  }
+  }, [animateNumber, isVisible]);
 
   function isElementVisible(element) {
     const rect = element.getBoundingClientRect();
