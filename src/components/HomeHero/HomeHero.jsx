@@ -60,11 +60,11 @@ const HomeHero = () => {
       window.innerWidth < 1440
         ? setInterval(() => {
             setCurrentTitle(prevTitle => (prevTitle + 1) % titles.length);
-          }, 1000)
+          }, 5000)
         : null;
 
     return () => clearInterval(interval);
-  }, [titles.length]);
+  }, []);
 
   return (
     <Section>
