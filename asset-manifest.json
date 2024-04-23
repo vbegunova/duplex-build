@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/duplex-build/static/css/main.7acaea2f.css",
+    "main.js": "/duplex-build/static/js/main.2c4a72ab.js",
+    "static/js/859.b962a8ff.chunk.js": "/duplex-build/static/js/859.b962a8ff.chunk.js",
+    "static/js/314.b8563e73.chunk.js": "/duplex-build/static/js/314.b8563e73.chunk.js",
+    "static/js/77.69fb716d.chunk.js": "/duplex-build/static/js/77.69fb716d.chunk.js",
+    "static/js/92.64466235.chunk.js": "/duplex-build/static/js/92.64466235.chunk.js",
+    "static/js/387.480f6928.chunk.js": "/duplex-build/static/js/387.480f6928.chunk.js",
+    "static/media/sprite.svg": "/duplex-build/static/media/sprite.841bf7fcbc4488f0af03a225d188838c.svg",
+    "index.html": "/duplex-build/index.html",
+    "main.7acaea2f.css.map": "/duplex-build/static/css/main.7acaea2f.css.map",
+    "main.2c4a72ab.js.map": "/duplex-build/static/js/main.2c4a72ab.js.map",
+    "859.b962a8ff.chunk.js.map": "/duplex-build/static/js/859.b962a8ff.chunk.js.map",
+    "314.b8563e73.chunk.js.map": "/duplex-build/static/js/314.b8563e73.chunk.js.map",
+    "77.69fb716d.chunk.js.map": "/duplex-build/static/js/77.69fb716d.chunk.js.map",
+    "92.64466235.chunk.js.map": "/duplex-build/static/js/92.64466235.chunk.js.map",
+    "387.480f6928.chunk.js.map": "/duplex-build/static/js/387.480f6928.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.2c4a72ab.js"
+  ]
+}
