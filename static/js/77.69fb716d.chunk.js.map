@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/77.69fb716d.chunk.js","mappings":"wKAMA,EANgB,WACd,OACEA,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,GAEJ,C","sources":["pages/Catalog/Catalog.jsx"],"sourcesContent":["const Catalog = () => {\n  return (\n    <></>\n  );\n};\n\nexport default Catalog;"],"names":["_jsx","_Fragment"],"sourceRoot":""}
