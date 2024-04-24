@@ -3,12 +3,12 @@ import { ContainerStyled } from '../../Styled/ContainerStyled';
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  padding-top: 86px;
-  padding-bottom: 88px;
+  padding-top: 48px;
+  padding-bottom: 45px;
 
   @media screen and (min-width: 1440px) {
-    padding-top: 48px;
-    padding-bottom: 45px;
+    padding-top: 86px;
+    padding-bottom: 88px;
   }
 `;
 
