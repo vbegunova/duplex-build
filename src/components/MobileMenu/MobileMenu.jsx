@@ -64,16 +64,24 @@ const MobileMenu = ({ onClose }) => {
         <Title>Меню</Title>
         <List>
           <li>
-            <StyledLink to="/about-company">Про компанію</StyledLink>
+            <StyledLink to="/about-company" onClick={onClose}>
+              Про компанію
+            </StyledLink>
           </li>
           <li>
-            <StyledLink to="/catalog">Каталог</StyledLink>
+            <StyledLink to="/catalog" onClick={onClose}>
+              Каталог
+            </StyledLink>
           </li>
           <li>
-            <StyledLink to="/blog">Блог</StyledLink>
+            <StyledLink to="/blog" onClick={onClose}>
+              Блог
+            </StyledLink>
           </li>
           <li>
-            <StyledLink to="/contacts">Контакти</StyledLink>
+            <StyledLink to="/contacts" onClick={onClose}>
+              Контакти
+            </StyledLink>
           </li>
         </List>
         <Contacts>
