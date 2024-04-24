@@ -7,7 +7,6 @@ import {
   MobileMenuBtn,
   MobileMenuIcon,
   Title,
-  Navigation,
   List,
   StyledLink,
   Contacts,
@@ -28,28 +27,26 @@ import {
 
 const MobileMenu = ({ onClose }) => {
   const mobileMenuRef = useRef(null);
+  const mobileMenuRefCopy = useRef(null);
 
   useEffect(() => {
-    // Запретить прокрутку тела при открытии мобильного меню
-    disableBodyScroll(mobileMenuRef.current);
+    mobileMenuRefCopy.current = mobileMenuRef.current;
+    disableBodyScroll(mobileMenuRefCopy.current);
 
-    // Функция для проверки ширины окна и закрытия меню
     const handleResize = () => {
       if (window.innerWidth > 1440) {
-        onClose(); // Вызываем функцию закрытия меню
+        onClose();
       }
     };
 
-    // Слушаем изменение размера окна
     window.addEventListener('resize', handleResize);
 
-    // Удаляем слушатель при размонтировании компонента
     return () => {
-      enableBodyScroll(mobileMenuRef.current);
+      enableBodyScroll(mobileMenuRefCopy.current);
       clearAllBodyScrollLocks();
       window.removeEventListener('resize', handleResize);
     };
-  }, [onClose]); // Зависимость от onClose для обновления, если props изменится
+  }, [onClose]);
 
   return (
     <MenuBox ref={mobileMenuRef}>
