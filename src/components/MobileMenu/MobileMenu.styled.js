@@ -84,42 +84,39 @@ export const StyledLink = styled(NavLink)`
 `;
 
 export const Contacts = styled.div`
-  display: none;
-
-  @media screen and (min-width: 1440px) {
-    display: flex;
-    gap: 17px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 export const SocMediaList = styled.ul`
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
 `;
 
 export const SocMediaLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 36px;
-  height: 36px;
+  width: 47px;
+  height: 47px;
   background-color: #fff;
   border-radius: 50%;
 `;
 
 export const SocMediaIcon = styled.svg`
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
 `;
 
 export const SocMediaTelegram = styled(SocMediaIcon)`
-  margin-right: 2px;
+  margin-right: 3px;
+  margin-top: 2px;
 `;
 
 export const PhoneLink = styled.a`
   color: ${globalColors.white};
-  margin-top: 10px;
   font-family: 'VisueltPro', sans-serif;
   font-weight: 400;
   font-size: 20px;

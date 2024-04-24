@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import {
   Container,
@@ -36,6 +36,8 @@ import roundElem from '../../images/footer-round-elem.png';
 import MobileMenu from '../../components/MobileMenu';
 
 const SharedLayout = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <>
       <Header>
@@ -85,10 +87,7 @@ const SharedLayout = () => {
             </SocMediaList>
             <PhoneLink href="#">+38 98 000 0000</PhoneLink>
           </Contacts>
-          <MobileMenuBtn
-          // aria-expanded="false"
-          // aria-controls="mobile-menu"
-          >
+          <MobileMenuBtn onClick={() => setIsMobileMenuOpen(true)}>
             <MobileMenuIcon>
               <use href={`${sprite}#icon-burger`}></use>
             </MobileMenuIcon>
@@ -157,10 +156,15 @@ const SharedLayout = () => {
               </li>
             </SocMediaList>
           </div>
-          <RoundElem src={roundElem}/>
+          <RoundElem src={roundElem} />
         </FooterContainer>
       </Footer>
-      <MobileMenu />
+      {isMobileMenuOpen && (
+        <MobileMenu
+          isOpen={isMobileMenuOpen}
+          onClose={() => setIsMobileMenuOpen(false)}
+        />
+      )}
     </>
   );
 };
