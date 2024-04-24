@@ -4,7 +4,6 @@ import { ObjectMapSection, BlogMapSection, Container, MapBox, Section } from './
 const Map = () => {
   const location = useLocation();
   const currentPage = location.pathname;
-  console.log(currentPage);
 
   return (
     <>
