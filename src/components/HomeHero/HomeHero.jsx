@@ -15,6 +15,7 @@ import {
 } from './HomeHero.styled';
 import { useRef } from 'react';
 import { useEffect } from 'react';
+import Modal from 'components/Modal';
 
 const titles = [
   {
@@ -41,6 +42,7 @@ const titles = [
 
 const HomeHero = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const titleBoxRef = useRef(null);
 
   useEffect(() => {
@@ -67,39 +69,46 @@ const HomeHero = () => {
   }, []);
 
   return (
-    <Section>
-      <Container>
-        <TextBox>
-          <TitleBox>
-            <List ref={titleBoxRef}>
-              {titles.map(title => {
-                return (
-                  <Item key={title.index}>
-                    <Title dangerouslySetInnerHTML={{ __html: title.title }} />
-                    <Description>{title.description}</Description>
-                  </Item>
-                );
-              })}
-            </List>
-            <SliderDots>
-              {titles.map((_, index) => (
-                <Dot
-                  key={index}
-                  className={`${currentTitle === index ? 'active' : ''}`}
-                  onClick={() => setCurrentTitle(index)}
-                ></Dot>
-              ))}
-            </SliderDots>
-          </TitleBox>
-          <Line />
-        </TextBox>
-        <Button>
-          Отримати
-          <br />
-          пропозицію
-        </Button>
-      </Container>
-    </Section>
+    <>
+      <Section>
+        <Container>
+          <TextBox>
+            <TitleBox>
+              <List ref={titleBoxRef}>
+                {titles.map(title => {
+                  return (
+                    <Item key={title.index}>
+                      <Title
+                        dangerouslySetInnerHTML={{ __html: title.title }}
+                      />
+                      <Description>{title.description}</Description>
+                    </Item>
+                  );
+                })}
+              </List>
+              <SliderDots>
+                {titles.map((_, index) => (
+                  <Dot
+                    key={index}
+                    className={`${currentTitle === index ? 'active' : ''}`}
+                    onClick={() => setCurrentTitle(index)}
+                  ></Dot>
+                ))}
+              </SliderDots>
+            </TitleBox>
+            <Line />
+          </TextBox>
+          <Button onClick={() => setIsModalOpen(true)}>
+            Отримати
+            <br />
+            пропозицію
+          </Button>
+        </Container>
+      </Section>
+      {isModalOpen && (
+        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      )}
+    </>
   );
 };
 

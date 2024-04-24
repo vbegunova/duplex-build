@@ -33,6 +33,7 @@ import {
 import sprite from '../../images/sprite.svg';
 import logo from '../../images/logo.png';
 import roundElem from '../../images/footer-round-elem.png';
+import MobileMenu from '../../components/MobileMenu';
 
 const SharedLayout = () => {
   return (
@@ -159,6 +160,7 @@ const SharedLayout = () => {
           <RoundElem src={roundElem}/>
         </FooterContainer>
       </Footer>
+      <MobileMenu />
     </>
   );
 };

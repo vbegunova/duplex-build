@@ -24,12 +24,12 @@ const SliderGallery = () => {
           <SliderControls>
             <SliderBtn>
               <ArrowIcon>
-                <use href={`${sprite}#icon-arrow-right`}></use>
+                <use href={`${sprite}#icon-arrow-left`}></use>
               </ArrowIcon>
             </SliderBtn>
             <SliderBtn>
               <ArrowIcon>
-                <use href={`${sprite}#icon-arrow-left`}></use>
+                <use href={`${sprite}#icon-arrow-right`}></use>
               </ArrowIcon>
             </SliderBtn>
           </SliderControls>

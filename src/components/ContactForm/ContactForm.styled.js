@@ -108,7 +108,7 @@ export const Button = styled(NavLink)`
   background-color: ${globalColors.white};
   border: none;
   color: #171d22;
-  font-family: 'Stolzl', sans-serif;
+  font-family: 'Shtolzl', sans-serif;
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;

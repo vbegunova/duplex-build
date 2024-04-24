@@ -96,7 +96,7 @@ export const FormInput = styled.input`
   height: 47px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  font-family: 'Stolzl Book', sans-serif;
+  font-family: 'Shtolzl Book', sans-serif;
   font-weight: 400;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
@@ -109,7 +109,7 @@ export const FormInput = styled.input`
   }
 
   &::placeholder {
-    font-family: 'Stolzl Book', sans-serif;
+    font-family: 'Shtolzl Book', sans-serif;
     font-weight: 400;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
@@ -131,7 +131,7 @@ export const Button = styled(NavLink)`
   background-color: #fff;
   border: none;
   color: #171d22;
-  font-family: 'Stolzl', sans-serif;
+  font-family: 'Shtolzl', sans-serif;
   font-weight: 500;
   font-size: 13px;
   text-transform: uppercase;
