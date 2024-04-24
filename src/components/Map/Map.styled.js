@@ -7,6 +7,24 @@ export const Section = styled.section`
   background-color: #131313;
 `;
 
+export const BlogMapSection = styled(Section)`
+  padding-bottom: 38px;
+
+  @media screen and (min-width: 1440px) {
+    padding-bottom: 10px;
+  }
+`;
+
+export const ObjectMapSection = styled(Section)`
+  padding-top: 30px;
+  padding-bottom: 37px;
+  
+  @media screen and (min-width: 1440px) {
+    padding-top: 51px;
+    padding-bottom: 110px;
+  }
+`;
+
 export const Container = styled.div`
   ${ContainerStyled}
 `;

@@ -4,7 +4,7 @@ import objectImage from '../../images/home/house-image.jpg';
 const HomeCatalogItem = () => {
   return (
     <Item>
-      <ImageThumb to="/">
+      <ImageThumb to="/object">
         <Image src={objectImage} alt="house"/>
         <Overlay>
           <Button>Переглянути</Button>

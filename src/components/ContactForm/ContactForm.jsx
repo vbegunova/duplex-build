@@ -20,7 +20,7 @@ const ContactForm = () => {
         <Form>
           <FormInput type="text" placeholder="Ваше ім'я" />
           <FormInput type="text" placeholder="Ваш телефон" />
-          <Button type="submit">Звернутися</Button>
+          <Button to="/thanks">Звернутися</Button>
         </Form>
       </Container>
     </Section>

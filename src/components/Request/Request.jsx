@@ -1,4 +1,13 @@
-import { Button, Container, Description, Form, FormBox, FormInput, Section, Title } from './Request.styled';
+import {
+  Button,
+  Container,
+  Description,
+  Form,
+  FormBox,
+  FormInput,
+  Section,
+  Title,
+} from './Request.styled';
 
 const Request = () => {
   return (
@@ -18,7 +27,7 @@ const Request = () => {
           <Form>
             <FormInput type="text" placeholder="Ваше ім'я" />
             <FormInput type="text" placeholder="Ваш телефон" />
-            <Button>Звернутися</Button>
+            <Button to="/thanks">Звернутися</Button>
           </Form>
         </FormBox>
       </Container>

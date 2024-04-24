@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import background from '../../images/home/request-background-desktop.jpg';
 import { ContainerStyled } from '../../Styled/ContainerStyled';
 import { globalColors } from '../../Styled/GlobalColors';
+import { NavLink } from 'react-router-dom';
 
 export const Section = styled.section`
   padding-top: 43px;
@@ -121,7 +122,7 @@ export const FormInput = styled.input`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled(NavLink)`
   width: 222px;
   height: 59px;
   display: flex;
