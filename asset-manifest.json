@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/duplex-build/static/css/main.f2db3b31.css",
-    "main.js": "/duplex-build/static/js/main.92fdc4c2.js",
-    "static/js/751.9918f304.chunk.js": "/duplex-build/static/js/751.9918f304.chunk.js",
-    "static/js/582.67629b6c.chunk.js": "/duplex-build/static/js/582.67629b6c.chunk.js",
+    "main.js": "/duplex-build/static/js/main.0646268d.js",
+    "static/js/751.1ffb79f1.chunk.js": "/duplex-build/static/js/751.1ffb79f1.chunk.js",
+    "static/js/582.f49a5367.chunk.js": "/duplex-build/static/js/582.f49a5367.chunk.js",
     "static/js/418.78848398.chunk.js": "/duplex-build/static/js/418.78848398.chunk.js",
-    "static/js/950.7485d8e5.chunk.js": "/duplex-build/static/js/950.7485d8e5.chunk.js",
-    "static/js/652.44381f9a.chunk.js": "/duplex-build/static/js/652.44381f9a.chunk.js",
+    "static/js/950.5d29637c.chunk.js": "/duplex-build/static/js/950.5d29637c.chunk.js",
+    "static/js/295.d4cf7ce1.chunk.js": "/duplex-build/static/js/295.d4cf7ce1.chunk.js",
     "static/js/384.92764cc1.chunk.js": "/duplex-build/static/js/384.92764cc1.chunk.js",
-    "static/js/912.11be5106.chunk.js": "/duplex-build/static/js/912.11be5106.chunk.js",
+    "static/js/912.1cb44298.chunk.js": "/duplex-build/static/js/912.1cb44298.chunk.js",
     "static/js/603.e27865ad.chunk.js": "/duplex-build/static/js/603.e27865ad.chunk.js",
+    "static/js/340.0b8fa043.chunk.js": "/duplex-build/static/js/340.0b8fa043.chunk.js",
     "static/media/about-duplex-img-desktop.png": "/duplex-build/static/media/about-duplex-img-desktop.2644b1f5d562e737b36c.png",
     "static/media/article-bg.jpg": "/duplex-build/static/media/article-bg.b523b283fc5a42e6c41c.jpg",
     "static/media/hero-image-desktop.jpg": "/duplex-build/static/media/hero-image-desktop.95a9c246206384cf9ca0.jpg",
@@ -49,18 +50,19 @@
     "static/media/NeutralFaceRegular.woff": "/duplex-build/static/media/NeutralFaceRegular.370198090b765d1482cb.woff",
     "index.html": "/duplex-build/index.html",
     "main.f2db3b31.css.map": "/duplex-build/static/css/main.f2db3b31.css.map",
-    "main.92fdc4c2.js.map": "/duplex-build/static/js/main.92fdc4c2.js.map",
-    "751.9918f304.chunk.js.map": "/duplex-build/static/js/751.9918f304.chunk.js.map",
-    "582.67629b6c.chunk.js.map": "/duplex-build/static/js/582.67629b6c.chunk.js.map",
+    "main.0646268d.js.map": "/duplex-build/static/js/main.0646268d.js.map",
+    "751.1ffb79f1.chunk.js.map": "/duplex-build/static/js/751.1ffb79f1.chunk.js.map",
+    "582.f49a5367.chunk.js.map": "/duplex-build/static/js/582.f49a5367.chunk.js.map",
     "418.78848398.chunk.js.map": "/duplex-build/static/js/418.78848398.chunk.js.map",
-    "950.7485d8e5.chunk.js.map": "/duplex-build/static/js/950.7485d8e5.chunk.js.map",
-    "652.44381f9a.chunk.js.map": "/duplex-build/static/js/652.44381f9a.chunk.js.map",
+    "950.5d29637c.chunk.js.map": "/duplex-build/static/js/950.5d29637c.chunk.js.map",
+    "295.d4cf7ce1.chunk.js.map": "/duplex-build/static/js/295.d4cf7ce1.chunk.js.map",
     "384.92764cc1.chunk.js.map": "/duplex-build/static/js/384.92764cc1.chunk.js.map",
-    "912.11be5106.chunk.js.map": "/duplex-build/static/js/912.11be5106.chunk.js.map",
-    "603.e27865ad.chunk.js.map": "/duplex-build/static/js/603.e27865ad.chunk.js.map"
+    "912.1cb44298.chunk.js.map": "/duplex-build/static/js/912.1cb44298.chunk.js.map",
+    "603.e27865ad.chunk.js.map": "/duplex-build/static/js/603.e27865ad.chunk.js.map",
+    "340.0b8fa043.chunk.js.map": "/duplex-build/static/js/340.0b8fa043.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f2db3b31.css",
-    "static/js/main.92fdc4c2.js"
+    "static/js/main.0646268d.js"
   ]
 }
