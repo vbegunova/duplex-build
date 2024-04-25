@@ -22,7 +22,6 @@ const BlogHero = () => {
         <Title>Новини</Title>
         <List>
           {blog.map(item => {
-            console.log(item.img);
             return (
               <Item key={item.index}>
                 <Image src={item.img} />

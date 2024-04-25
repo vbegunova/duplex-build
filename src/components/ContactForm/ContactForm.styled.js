@@ -99,7 +99,7 @@ export const FormInput = styled.input`
   }
 `;
 
-export const Button = styled(NavLink)`
+export const Button = styled.button`
   width: 284px;
   height: 75px;
   display: flex;

@@ -52,7 +52,7 @@ const MobileMenu = ({ onClose }) => {
     <MenuBox ref={mobileMenuRef}>
       <Container>
         <TopContainer>
-          <NavLink to="/">
+          <NavLink to="/" onClick={onClose}>
             <LogoImage src={logo} alt="logo" />
           </NavLink>
           <MobileMenuBtn onClick={onClose}>

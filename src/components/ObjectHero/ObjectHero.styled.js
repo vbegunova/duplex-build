@@ -202,6 +202,19 @@ export const Description = styled.p`
   }
 `;
 
+export const PlanBox = styled.div`
+  margin-bottom: 35px;
+  width: 100%;
+  height: 300px;
+  background-color: #c4c4c4;
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+    width: 765px;
+    height: 384px;
+  }
+`;
+
 export const Square = styled.div`
   margin-bottom: 10px;
   width: 100%;

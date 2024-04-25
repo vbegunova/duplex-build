@@ -58,12 +58,9 @@ const HomeHero = () => {
   }, [currentTitle]);
 
   useEffect(() => {
-    const interval =
-      window.innerWidth < 1440
-        ? setInterval(() => {
-            setCurrentTitle(prevTitle => (prevTitle + 1) % titles.length);
-          }, 5000)
-        : null;
+    const interval = setInterval(() => {
+      setCurrentTitle(prevTitle => (prevTitle + 1) % titles.length);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { ContainerStyled } from '../../Styled/ContainerStyled';
 import { globalColors } from '../../Styled/GlobalColors';
@@ -268,12 +268,22 @@ export const FooterSocMediaItem = styled.a`
   }
 `;
 
+const spin = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
 export const RoundElem = styled.img`
   width: 450px;
   height: 450px;
   position: absolute;
   top: 410px;
   right: -70px;
+  animation: ${spin} 15s linear infinite;
 
   @media screen and (min-width: 1440px) {
     width: 641px;

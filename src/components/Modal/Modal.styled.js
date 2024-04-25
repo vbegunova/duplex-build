@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import { globalColors } from '../../Styled/GlobalColors';
 import styled from 'styled-components';
 
@@ -141,7 +140,7 @@ export const FormInput = styled.input`
   }
 `;
 
-export const Button = styled(NavLink)`
+export const Button = styled.button`
   width: 100%;
   height: 64px;
   display: flex;

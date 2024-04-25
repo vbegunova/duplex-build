@@ -16,6 +16,7 @@ import {
   Line,
   List,
   Number,
+  PlanBox,
   PriceBox,
   PriceText,
   Section,
@@ -31,6 +32,12 @@ import { useState } from 'react';
 
 const ObjectHero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeButton, setActiveButton] = useState('about');
+
+  const handleButtonClick = button => {
+    setActiveButton(button);
+  };
+
   return (
     <>
       <Section>
@@ -40,81 +47,97 @@ const ObjectHero = () => {
             <div>
               <Image src={img} />
               <ButtonsBox>
-                <Button className="active">Про будинок</Button>
-                <Button>Планування</Button>
+                <Button
+                  className={activeButton === 'about' ? 'active' : ''}
+                  onClick={() => handleButtonClick('about')}
+                >
+                  Про будинок
+                </Button>
+                <Button
+                  className={activeButton === 'plan' ? 'active' : ''}
+                  onClick={() => handleButtonClick('plan')}
+                >
+                  Планування
+                </Button>
               </ButtonsBox>
-              <List>
-                <Item>
-                  <IconBox>
-                    <InfoIconFill>
-                      <use href={`${sprite}#icon-bed`}></use>
-                    </InfoIconFill>
-                  </IconBox>
-                  <div>
-                    <Number>4</Number>
-                    <Text>Спальні</Text>
-                  </div>
-                </Item>
-                <Item>
-                  <IconBox>
-                    <InfoIconFill>
-                      <use href={`${sprite}#icon-wardrobe`}></use>
-                    </InfoIconFill>
-                  </IconBox>
-                  <div>
-                    <Number>2</Number>
-                    <Text>Гардероби</Text>
-                  </div>
-                </Item>
-                <Item>
-                  <IconBox>
-                    <InfoIconStroke>
-                      <use href={`${sprite}#icon-toilet`}></use>
-                    </InfoIconStroke>
-                  </IconBox>
-                  <div>
-                    <Number>3</Number>
-                    <Text>Санвузоли</Text>
-                  </div>
-                </Item>
-                <Item>
-                  <IconBox>
-                    <InfoIconFill>
-                      <use href={`${sprite}#icon-office`}></use>
-                    </InfoIconFill>
-                  </IconBox>
-                  <div>
-                    <Number>1</Number>
-                    <Text>Кабінети</Text>
-                  </div>
-                </Item>
-                <Item>
-                  <IconBox>
-                    <InfoIconStroke>
-                      <use href={`${sprite}#icon-tech-room`}></use>
-                    </InfoIconStroke>
-                  </IconBox>
-                  <div>
-                    <Number>1</Number>
-                    <Text>Тех. кімнати</Text>
-                  </div>
-                </Item>
-              </List>
-              <Description>
-                Продається елітний двоповерховий будинок площею 330 кв.м з
-                гаражем, балконом і терасою, розташований в закритому котеджному
-                містечку с. Лісники, що знаходиться в передмісті Києва. Цей
-                великий, просторий будинок відзначається зручним плануванням та
-                високими стелями, що створюють відчуття простору та комфорту.
-                Гараж розрахований на зберігання двох автомобілів, що
-                забезпечить комфортне розташування вашого автопарку. Панорамні
-                вікна дозволять вам насолоджуватися захоплюючими видами
-                соснового лісу, що межує з вашим подвір'ям, кожен день. Земельна
-                ділянка, що прилегла до будинку, облагороджена та відкрита для
-                реалізації будь-яких дизайнерських ідей та проектів. Якщо ви
-                шукаєте великий, ергономічний будинок в мальовничій місцевості,
-                цей варіант точно відповідає вашим потребам.
-              </Description>
+              {activeButton === 'about' && (
+                <>
+                  <List>
+                    <Item>
+                      <IconBox>
+                        <InfoIconFill>
+                          <use href={`${sprite}#icon-bed`}></use>
+                        </InfoIconFill>
+                      </IconBox>
+                      <div>
+                        <Number>4</Number>
+                        <Text>Спальні</Text>
+                      </div>
+                    </Item>
+                    <Item>
+                      <IconBox>
+                        <InfoIconFill>
+                          <use href={`${sprite}#icon-wardrobe`}></use>
+                        </InfoIconFill>
+                      </IconBox>
+                      <div>
+                        <Number>2</Number>
+                        <Text>Гардероби</Text>
+                      </div>
+                    </Item>
+                    <Item>
+                      <IconBox>
+                        <InfoIconStroke>
+                          <use href={`${sprite}#icon-toilet`}></use>
+                        </InfoIconStroke>
+                      </IconBox>
+                      <div>
+                        <Number>3</Number>
+                        <Text>Санвузоли</Text>
+                      </div>
+                    </Item>
+                    <Item>
+                      <IconBox>
+                        <InfoIconFill>
+                          <use href={`${sprite}#icon-office`}></use>
+                        </InfoIconFill>
+                      </IconBox>
+                      <div>
+                        <Number>1</Number>
+                        <Text>Кабінети</Text>
+                      </div>
+                    </Item>
+                    <Item>
+                      <IconBox>
+                        <InfoIconStroke>
+                          <use href={`${sprite}#icon-tech-room`}></use>
+                        </InfoIconStroke>
+                      </IconBox>
+                      <div>
+                        <Number>1</Number>
+                        <Text>Тех. кімнати</Text>
+                      </div>
+                    </Item>
+                  </List>
+                  <Description>
+                    Продається елітний двоповерховий будинок площею 330 кв.м з
+                    гаражем, балконом і терасою, розташований в закритому
+                    котеджному містечку с. Лісники, що знаходиться в передмісті
+                    Києва. Цей великий, просторий будинок відзначається зручним
+                    плануванням та високими стелями, що створюють відчуття
+                    простору та комфорту. Гараж розрахований на зберігання двох
+                    автомобілів, що забезпечить комфортне розташування вашого
+                    автопарку. Панорамні вікна дозволять вам насолоджуватися
+                    захоплюючими видами соснового лісу, що межує з вашим
+                    подвір'ям, кожен день. Земельна ділянка, що прилегла до
+                    будинку, облагороджена та відкрита для реалізації будь-яких
+                    дизайнерських ідей та проектів. Якщо ви шукаєте великий,
+                    ергономічний будинок в мальовничій місцевості, цей варіант
+                    точно відповідає вашим потребам.
+                  </Description>
+                </>
+              )}
+              {activeButton === 'plan' && (<PlanBox/>)}
             </div>
             <div>
               <Square>
