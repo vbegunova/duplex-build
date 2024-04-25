@@ -3,7 +3,6 @@ import mobileBg from '../../images/home/contact-us-mobile.jpg';
 import desktopBg from '../../images/home/contact-us-background-desktop.png';
 import { ContainerStyled } from '../../Styled/ContainerStyled';
 import { globalColors } from '../../Styled/GlobalColors';
-import { NavLink } from 'react-router-dom';
 
 export const Section = styled.section`
   background-color: #101010;
